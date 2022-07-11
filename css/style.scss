@@ -29,29 +29,55 @@ nav{
 }
 
 #btnPesquisar{
-    border: 1px  #17e980 solid;
+    border: 1px  #000000 solid;
     border-radius: 5px;
-    color: #17e980;
+    color: #000000;
     padding: 9px;
     margin: 8px;    
 }
 
 #btnPesquisar:hover{
    background-color: #17e980;
+   border: 1px  #17e980 solid;
+   color: white;
+   transform: scale(1.05);
+   transition: all 0.3s;
+}
+
+
+#btnCadastrar{
+    border: 1px  #000000 solid;
+    border-radius: 5px;
+    color: #000000;
+    padding: 9px;
+    margin: 10px 0px 10px 50%;
+    
+}
+
+#btnCadastrar:hover{
+   background-color: #17e980;
+   border: 1px  #17e980 solid;
    color: white;
    transform: scale(1.05);
    transition: all 0.3s;
 }
 
 .pesquisa{
-    border-bottom: 1px #C0C0C0 solid;
     padding-bottom: 15px;
     margin-bottom: 5px;
     
 }
 
 .caixaConsulta{
-    background-color: #FFEBCD;
+    background-color: #5F9EA0;
+}
+
+#tituloConsultaCadastrar{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 
@@ -68,8 +94,10 @@ nav{
 
 #titulo{
     color: rgb(0, 0, 0);
+    font-weight: bolder;
     margin-top: 10px;
     text-align: center;
+    border-bottom: 1px gray solid;
 }
 #ConsultarCliente{
     margin-top: 15px;
@@ -78,12 +106,6 @@ nav{
     
 }
 
-.bordaBaixo{
-    border-bottom: 1px gainsboro solid;
-    margin-top: 5px;
-    margin-bottom: 10px;
-
-}
 .row{
     margin-left: 0px;
     margin-right: 0px;
@@ -109,8 +131,6 @@ nav{
 
 
 #resultadoConsulta{
-    border: 2px solid;
-    border-color: rgb(190, 187, 187);
     margin-top: 10px;
     margin-bottom: 1050px;
     padding: 5px;

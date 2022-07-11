@@ -1,0 +1,69 @@
+body {
+  background-color: aqua;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row {
+  background-color: aliceblue;
+  border-bottom: 10px;
+  border-color: black solid;
+}
+
+#logo {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#botaoNavBar {
+  margin-top: 20px;
+  margin-left: 710px;
+}
+
+#titulo {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#ConsultarCliente {
+  margin-top: 15px;
+  background-color: antiquewhite;
+  padding: 6px;
+}
+
+#buttonBuscar {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#buttonBuscar .btn {
+  padding: 5px 100px;
+}
+
+.marign10 {
+  margin-top: 11px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#resultadoConsulta {
+  margin-bottom: 1050px;
+  padding: 5px;
+  border: 2px solid;
+  border-color: #bebbbb;
+}
+
+#resultadoConsulta ul {
+  list-style: none;
+  margin: 0;
+}
+
+.container .row {
+  background-color: aliceblue;
+}
+/*# sourceMappingURL=style.css.map */

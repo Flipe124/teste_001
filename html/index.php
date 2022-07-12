@@ -1,56 +1,64 @@
 <?php include_once("../includes/header.php"); ?>
-
+<?php include_once("../Database/Database.php"); ?>
 <div class="container">
-   
     <div class="row">
         <div class="col-md-12 caixaConsulta">
             <div id="tituloConsultaCadastrar">
                 <h3>Consultar</h3>
             </div>
-            <div class="input-group pesquisa">
-            <input type="email" id="inputEmail" placeholder="E-mail">
-            <div class="input-group-pprend">
-                <button id="btnPesquisar">PESQUISAR</button>
-            </div>
+            <form method="get">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
+                            <div class="input-group-pprend">
+                                <button type="submit" id="btnPesquisar">PESQUISAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-        </div>
-
         <div id="titulo">
             <h3>Resultado</h3>
         </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data Nasc</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th scope="col">#ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Data Nasc</th>
-            <th scope="col">E-mail</th>
-        </tr>
-    </thead>
-  <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>02/09/2004</td>
-            <td>mark@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>10/05/2000</td>
-            <td>jacob@fat</td>
-        </tr>
-        <tr>
-        <th scope="row">3</th>
-        <td>Larry the Bird</td>
-        <td>10/05/2000</td>
-        <td>larry@twitter</td>
-        </tr>
-    </tbody>
-</table>
+            $search = isset($_GET["search"]) ? $_GET["search"] : "";
+
+            $sql = "SELECT * FROM `user` WHERE  1 = 1";
+
+            if($search) {
+                $sql .= " AND `name` LIKE " . "'%" . $search . "%'";
+            }
+
+            $users = Database::connection()->query($sql)->fetchAll(PDO::FETCH_ASSOC);;
+            ?>
+            <?php foreach ($users as $user) { ?>
+                <tr>
+                    <th scope="row"><?php echo $user['id']; ?></th>
+                    <td><?php echo $user['name']; ?></td>
+                    <td><?php echo date("d/m/Y", strtotime(($user['date_of_birth']))); ?></td>
+                    <td><?php echo $user['email']; ?></td>
+                    <td>
+                        <a href="" class="btn btn-primary"></a>
+                    </td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
     </div>
-    <div id="scronllVertical"></div>
 </div>
 
 <?php include_once("../includes/footer.php"); ?>

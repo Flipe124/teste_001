@@ -16,7 +16,7 @@ a {
 
 nav {
   border-bottom: 1px #928f8f solid;
-  margin-bottom: 2px;
+  margin-bottom: 50px;
 }
 
 .ajuste .col-md-12 {
@@ -33,7 +33,7 @@ nav {
 }
 
 .btn-danger:hover {
-  background-color: red;
+  background-color: #ec1919;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-transition: all 0.3s;
@@ -49,6 +49,7 @@ nav {
 }
 
 #btnPesquisar {
+  background-color: #f5f5f5;
   border: 1px  #000000 solid;
   border-radius: 5px;
   color: #000000;
@@ -71,7 +72,7 @@ nav {
   border-radius: 5px;
   color: #000000;
   padding: 9px;
-  margin: 10px 0px 10px 38%;
+  margin: 10px 0px 10px 81%;
 }
 
 #btnCadastrar:hover {
@@ -89,7 +90,7 @@ nav {
   border-radius: 5px;
   color: #000000;
   padding: 9px;
-  margin: 10px 0px 10px 58%;
+  margin: 10px 0px 10px 86.5%;
 }
 
 #btnSalvar:hover {

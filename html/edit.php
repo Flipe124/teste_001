@@ -1,8 +1,17 @@
-<?php include_once("../includes/header.php"); ?>
-<?php include_once("../Database/Database.php"); ?>
+<?php include_once("../includes/header.php");?>
+<?php include_once("../Database/Database.php");?>
+<?php
+    // SQL para Seleciona os registros
+    //$result_msg_cont = "SELECT * FROM user WHERE id=1";
+    // Seleciona os registros
+   // $resultado_msg_cont = $conection->prepare($result_msg_cont);
+   // $resultado_msg_cont->execute();
+    //$resultado_msg_cont->fetch(PDO::FETCH_ASSOC);
+?>
+
 
 <div class="container">
-<form method="update" class="form">
+    <form method="update" class="form">
         <div class="row">
             <div class="col-md-12 caixaConsulta">
                 <div id="tituloConsultaCadastrar">
@@ -10,62 +19,53 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#ID</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Data Nasc</th>
-                            <th scope="col">E-mail</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        // Arrumar a cagada...
-                        if(!empty($_GET['id'])){
+                <?php
+                $id = isset($_GET["id"]) ? $_GET["id"] : NULL;
 
-                        $sql = "SELECT * FROM `user` WHERE  id=$id";
+                if (!$id) { ?>
+                    <div>
+                        <p>Usuário não encontrado :/</p>
+                        <a href="index.php" id="btnVoltar">VOLTAR</a>
+                    </div>
+                <?php } else { ?>
 
-                        $users = Database::connection()->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-                        }
-                        ?>
-                        <tr>                         
-                            <th scope="row">1</th>
-                            <td><?php echo $user['name'];?></td>
-                            <td><?php echo date("d/m/Y", strtotime(($user['date_of_birth'])));?></td>
-                            <td><?php if($user["email"]){echo $user["email"];}else{echo "--";}?></td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
+                    <?php $sql = "SELECT * FROM `user` WHERE  id=$id";
+
+                    $user = Database::connection()->query($sql)->fetch(PDO::FETCH_ASSOC);
+                    if (!$user) { ?>
+
+                        <div>
+                            <p>Usuário não encontrado :/</p>
+                            <a href="index.php" id="btnVoltar">VOLTAR</a>
+                        </div>
+                    <?php } else { ?>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control"value="<?php echo $user['name']; ?>" id="nome">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="data_de_nascimento">Data de nascimento</label>
+                                <!-- Gambiarra aqui embaixo type"date"-->
+                                <input type="" class="form-control" value="<?php echo date("d/m/Y", strtotime(($user['date_of_birth']))); ?>">
+                            </div>
+                            <div class="col-md-5">
+                                <label for="email">E-mail</label>
+                                <input type="email" class="form-control" value="<?php if ($user["email"]) {echo $user["email"];} else {echo "--";} ?>">
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <a href="index.php" type="button" id="btnVoltar">VOLTAR</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a name="SendEditCont" type="submit" id="btnSalvar">SALVAR</a>
+                            </div>
+                        </div>
+                    <?php } ?>
+                <?php } ?>
             </div>
-            <hr>
-            <div class="col-md-5">
-                <label for="nome">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome" id="nome">  
-            </div>
-            <div class="col-md-2">
-                <label for="data_de_nascimento">Data de nascimento</label>
-                <input type="date" class="form-control" placeholder="__/__/____">  
-            </div>
-            <div class="col-md-5">
-                <label for="email">E-mail</label>
-                <input type="email" class="form-control" placeholder="E-mail">  
-            </div>
-            <div class="col-md-2">
-                <div>
-                    <a href="index.php">
-                        <button type="button" id="btnVoltar">VOLTAR</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-8"></div>
-            <div class="col-md-2">
-                <div>
-                    <button type="button"  id="btnSalvar">SALVAR</button>
-                </div>
-            </div>
-            
+
         </div>
     </form>
 </div>

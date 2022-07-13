@@ -8,7 +8,6 @@
                     <h3>Cadastrar</h3>
                 </div>
             </div>
-
             <div class="col-md-5">
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" placeholder="Nome" id="nome">  
@@ -21,17 +20,14 @@
                 <label for="email">E-mail</label>
                 <input type="email" class="form-control" placeholder="E-mail">  
             </div>
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <div>
-                    <a href="index.php">
-                        <button type="button" id="btnVoltar">VOLTAR</button>
-                    </a>
+                    <a href="index.php" type="button" id="btnVoltar">VOLTAR</a>
                 </div>
             </div>
-            <div class="col-md-8"></div>
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <div>
-                    <button type="button"  id="btnCadastrar">CADASTRAR</button>
+                    <a type="button"  id="btnCadastrar">CADASTRAR</a>
                 </div>
             </div>
 

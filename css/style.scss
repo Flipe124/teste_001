@@ -16,6 +16,26 @@ a{
 
 nav{
     border-bottom: 1px #928f8f solid;
+    margin-bottom: 2px; // Editei aqui
+}
+
+//testes
+.ajuste{
+    .col-md-12{
+        padding: 5px;
+        background-color: #5F9EA0;
+    }
+}
+
+.btn-primary:hover{
+    background-color: blue;
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+.btn-danger:hover{
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.05);
+    transition: all 0.3s;
 }
 
 //---
@@ -44,13 +64,12 @@ nav{
    transition: all 0.3s;
 }
 
-
 #btnCadastrar{
     border: 1px  #000000 solid;
     border-radius: 5px;
     color: #000000;
     padding: 9px;
-    margin: 10px 0px 10px 50%;
+    margin: 10px 0px 10px 38%;
     
 }
 
@@ -62,6 +81,39 @@ nav{
    transition: all 0.3s;
 }
 
+#btnSalvar{
+    border: 1px  #000000 solid;
+    border-radius: 5px;
+    color: #000000;
+    padding: 9px;
+    margin: 10px 0px 10px 58%;
+    
+}
+
+#btnSalvar:hover{
+   background-color: #17e980;
+   border: 1px  #17e980 solid;
+   color: white;
+   transform: scale(1.05);
+   transition: all 0.3s;
+}
+
+#btnVoltar{
+    border: 1px  #000000 solid;
+    border-radius: 5px;
+    color: #000000;
+    padding: 9px;
+    margin: 10px 0px 10px 0%;
+    
+}
+
+#btnVoltar:hover{
+   background-color: #17aee9;
+   border: 1px  #17aee9 solid;
+   color: white;
+   transform: scale(1.05);
+   transition: all 0.3s;
+}
 .pesquisa{
     padding-bottom: 15px;
     margin-bottom: 5px;

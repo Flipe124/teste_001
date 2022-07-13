@@ -6,9 +6,9 @@
             <div id="tituloConsultaCadastrar">
                 <h3>Consultar</h3>
             </div>
-            <form method="get">
-                <div class="row">
-                    <div class="col-md-12">
+            <form method="get">                          
+                <div class="row ajuste">                  
+                    <div class="col-md-12 ">                
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
                             <div class="input-group-pprend">
@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>            
             </form>
         </div>
         <div id="titulo">
@@ -50,11 +50,12 @@
                     <th scope="row"><?php echo $user['id']; ?></th>
                     <td><?php echo $user['name']; ?></td>
                     <td><?php echo date("d/m/Y", strtotime(($user['date_of_birth']))); ?></td>
-                    <td><?php echo $user['email']; ?></td>
+                    <td><?php if($user["email"]){echo $user["email"];}else{echo "--";}?></td>
                     <td>
-                        <a href="" class="btn btn-primary"></a>
+                        <a href="edit.php?id=<?php echo $user['id'];?>" class="btn btn-primary">EDITAR</a>
+                        <a href="edit.php?id=<?php echo $user['id'];?>" class="btn btn-danger">EXCLUIR</a>
                     </td>
-                </tr>
+                </tr>               
             <?php } ?>
             </tbody>
         </table>

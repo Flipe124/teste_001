@@ -27,3 +27,33 @@ class bdconnection {
 }    
 ?>
 ```
+```
+ <?php
+
+            $search = isset($_GET["search"]) ? $_GET["search"] : "";
+
+            $sql = "SELECT * FROM `user` WHERE  1 = 1";
+
+            if($search) {
+                $sql .= " AND `name` LIKE " . "'%" . $search . "%'";
+            }
+
+            $users = Database::connection()->query($sql)->fetchAll(PDO::FETCH_ASSOC);;
+            ?>
+            <?php foreach ($users as $user) { ?>
+                <tr>
+                    <th scope="row"><?php echo $user['id']; ?></th>
+                    <td><?php echo $user['name']; ?></td>
+                    <td><?php echo date("d/m/Y", strtotime(($user['date_of_birth']))); ?></td>
+                    <td><?php echo $user['email']; ?>
+                
+                    </td>
+                    <td>
+                        <a href="edit.php?......" class="btn btn-primary">EDITAR</a>
+                    </td>
+                </tr>
+            <?php } ?>
+```
+```
+<?php echo $user['email']; ?>
+```

@@ -16,6 +16,28 @@ a {
 
 nav {
   border-bottom: 1px #928f8f solid;
+  margin-bottom: 2px;
+}
+
+.ajuste .col-md-12 {
+  padding: 5px;
+  background-color: #5F9EA0;
+}
+
+.btn-primary:hover {
+  background-color: blue;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-danger:hover {
+  background-color: red;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 #inputEmail {
@@ -49,12 +71,48 @@ nav {
   border-radius: 5px;
   color: #000000;
   padding: 9px;
-  margin: 10px 0px 10px 50%;
+  margin: 10px 0px 10px 38%;
 }
 
 #btnCadastrar:hover {
   background-color: #17e980;
   border: 1px  #17e980 solid;
+  color: white;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#btnSalvar {
+  border: 1px  #000000 solid;
+  border-radius: 5px;
+  color: #000000;
+  padding: 9px;
+  margin: 10px 0px 10px 58%;
+}
+
+#btnSalvar:hover {
+  background-color: #17e980;
+  border: 1px  #17e980 solid;
+  color: white;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#btnVoltar {
+  border: 1px  #000000 solid;
+  border-radius: 5px;
+  color: #000000;
+  padding: 9px;
+  margin: 10px 0px 10px 0%;
+}
+
+#btnVoltar:hover {
+  background-color: #17aee9;
+  border: 1px  #17aee9 solid;
   color: white;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);

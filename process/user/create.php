@@ -24,7 +24,7 @@ $insert->bindParam(':date_of_birth', $date_of_birth, PDO::PARAM_STR);
 $insert->bindParam(':email', $email, PDO::PARAM_STR);
 
 if ($insert->execute()) {
-    header("Location: ../../html/create.php?msg=successC");
+    header("Location: ../../html/create.php?msg=success");
     return;
 } else {
     header("Location: ../../html/create.php?msg=error");

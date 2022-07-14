@@ -8,16 +8,16 @@ $date_of_birth = isset($_POST["date_of_birth"]) && $_POST["date_of_birth"] != ""
 $email  = isset($_POST["email"]) && $_POST["email"] != ""  ? $_POST["email"] : NULL;
 
 if (!$name) {
-    header("Location: ../../html/edit.php?msg=name");
+    header("Location: ../wdevel/html/edit.php?msg=name");
     return;
 }
 
 if (!$date_of_birth) {
-    header("Location: ../../html/edit.php?msg=date_of_birth");
+    header("Location: ../wdevel/html/edit.php?msg=date_of_birth");
     return;
 }
 // // INSERIR NO BD
-$sql = ('UPDATE user SET name= :name, date_of_birth= :date_of_birth, email= :email WHERE id= :id');
+$sql = ('UPDATE product SET name= :name, date_of_birth= :date_of_birth, email= :email WHERE id= :id');
 
 $update = Database::connection()->prepare($sql);
 $update->bindParam(':id', $id, PDO::PARAM_INT);

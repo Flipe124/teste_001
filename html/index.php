@@ -6,15 +6,14 @@
             <div id="tituloConsultaCadastrar">
                 <h3>Consultar</h3>
                 <?php
-                    if (isset($_GET['msg'])) {
-                        if ($_GET['msg'] == 'success') {
-                            echo "Deletado com sucesso";
-                        } else if (($_GET['msg'] == 'error')){
-                            echo "Erro ao deletar";
-                        }
-                        
-                    }
-                    ?>
+                if (isset($_GET['msg'])) {
+                    if ($_GET['msg'] == 'success') {
+                        echo "Deletado com sucesso";
+                    } else if (($_GET['msg'] == 'error')){
+                        echo "Erro ao deletar";
+                    }                       
+                }
+                ?>
             </div>
             <form method="get">
                 <div class="row ajuste">

@@ -1,5 +1,4 @@
 <?php include_once("../includes/header.php"); ?>
-<?php include_once("../Database/Database.php"); ?>
 <div class="container">
     <div class="row">
         <div class="col-md-12 caixaConsulta">
@@ -37,14 +36,13 @@
                 <tr>
                     <th class="w-10 p-3" scope="col">#ID</th>
                     <th class="w-10 p-3" scope="col">Nome</th>
-                    <th class="w-10 p-3" scope="col">Data Nasc</th>
-                    <th class="w-20 p-3" scope="col">E-mail</th>
+                    <th class="w-10 p-3" scope="col">Descrição</th>
                     <th class="w- p-3" scope="col">Ação</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-
+                
                 $search = isset($_GET["search"]) ? $_GET["search"] : "";
 
                 $sql = "SELECT * FROM `user` WHERE  1 = 1";
@@ -59,9 +57,8 @@
                     <tr>
                         <th scope="row"><?php echo $user['id']; ?></th>
                         <td><?php echo $user['name']; ?></td>
-                        <td><?php echo date("d/m/Y", strtotime(($user['date_of_birth']))); ?></td>
-                        <td><?php if ($user["email"]) {
-                                echo $user["email"];
+                        <td><?php if ($user["description"]) {
+                                echo $user["description"];
                             } else {
                                 echo "--";
                             } ?></td>

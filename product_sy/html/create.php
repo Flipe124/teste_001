@@ -1,9 +1,9 @@
 <?php include_once("../includes/header.php"); ?>
 <div class="container">
     <form method="POST" action="../../process/product/create.php" class="form">
-        <div class="row">
-            <div class="col-md-12 caixaConsulta">
-                <div id="tituloConsultaCadastrar">
+        <div class="row row_color">
+            <div class="col-md-12 create_box">
+                <div class="titulo_centro">
                     <h3>Cadastrar</h3>
                     <?php
                     if (isset($_GET['msg'])) {

@@ -45,7 +45,7 @@
                         <textarea class="form-control" name="description" rows="3"><?php echo $product["description"]; ?></textarea>
                     </div>
                     <div class="col-md-6">
-                        <a href="index.php" type="button" id="btnVoltar">VOLTAR</a>
+                        <a href="index.php" type="button" class="btn btn-primary">VOLTAR</a>
                     </div>
                     <div class="col-md-6">
                         <button type="submit" id="btnSalvar">SALVAR</button>

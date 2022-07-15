@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <!--<link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/product.css">-->
+
     <title>WDEVEL</title>
 </head>
 <body>
@@ -21,10 +24,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Consultar</a>
+          <a class="nav-link active" aria-current="page" href="../user/index.php">Consultar usuário</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active"  href="create.php">Cadastrar</a>
+          <a class="nav-link active"  href="../user/create.php">Cadastrar usuário</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="../product/index.php">Consultar produto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active"  href="../product/create.php">Cadastrar produto</a>
         </li>
       </ul>
     </div>

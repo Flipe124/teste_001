@@ -10,10 +10,10 @@ $delete = Database::connection()->prepare($sql);
 $delete->bindParam(':id', $id, PDO::PARAM_INT);
 
 if ($delete->execute()) {
-    header("Location: ../../html/index.php?msg=success");
+    header("Location: ../../user/index.php?msg=success");
     return;
 } else {
-    header("Location: ../../html/index.php?msg=error");
+    header("Location: ../../user/index.php?msg=error");
     return;
 }
 ?>

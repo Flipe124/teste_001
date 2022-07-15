@@ -1,6 +1,6 @@
 <!-- MODIFICANDO-->
 <?php include_once("../includes/header.php");?>
-<?php include_once("../../Database/Database.php");?>
+<?php include_once("../Database/Database.php");?>
 <div class="container">
     <div class="row row_color">
         <div class="col-md-12 query_box">
@@ -21,7 +21,7 @@
                     <div class="col-md-12 ">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
-                            <div class="input-group-pprend"><a type="submit" class="btn btn-success" id="margin_pesquisar">PESQUISAR</a></div>
+                            <div class="input-group-pprend"><button type="submit" class="btn btn-outline-success" id="margin_pesquisar">PESQUISAR</button></div>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-12 titulo_centro"><h4>RESULTADO</h4></div>
         <hr>
-        <table class="table table-striped ">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th class="w-5 p-3" scope="col">#ID</th>
@@ -69,7 +69,7 @@
                                     <path d="M16 5l3 3"></path>
                                 </svg>
                             </a>
-                            <a href="../../process/product/delete.php?id=<?php echo $product['id']; ?>" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <a href="../process/product/delete.php?id=<?php echo $product['id']; ?>" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <line x1="4" y1="7" x2="20" y2="7"></line>
                                     <line x1="10" y1="11" x2="10" y2="17"></line>
@@ -85,4 +85,4 @@
         </table>
     </div>
 </div>
-<?php include_once("../../includes/footer.php"); ?>
+<?php include_once("../includes/footer.php");?>

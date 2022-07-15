@@ -1,9 +1,9 @@
 <?php include_once("../includes/header.php"); ?>
 <?php include_once("../Database/Database.php"); ?>
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 caixaConsulta">
-            <div id="tituloConsultaCadastrar">
+    <div class="row row_color">
+        <div class="col-md-12 query_box">
+            <div class="titulo_centro">
                 <h3>Consultar</h3>
                 <?php
                 if (isset($_GET['msg'])) {
@@ -16,22 +16,19 @@
                 ?>
             </div>
             <form method="get">
-                <div class="row ajuste">
+                <div class="row">
                     <div class="col-md-12 ">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
-                            <div class="input-group-pprend">
-                                <a type="submit" id="btnPesquisar">PESQUISAR</a>
-                            </div>
+                            <div class="input-group-pprend"><button class="btn btn-outline-success" id="margin_pesquisar" type="submit">PESQUISAR</button></div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        <div id="titulo">
-            <h3>Resultado</h3>
-        </div>
-        <table class="table table-striped ">
+        <div class="col-md-12 titulo_centro"><h4>Resultado</h4></div>
+        <hr>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th class="w-10 p-3" scope="col">#ID</th>

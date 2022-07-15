@@ -1,11 +1,11 @@
-<?php include_once("../includes/header.php"); ?>
-<?php include_once("../../Database/Database.php"); ?>
+<?php include_once("../includes/header.php");?>
+<?php include_once("../Database/Database.php");?>
 <div class="container">
-    <form action="../../process/product/update.php" method="post">
+    <form action="../process/product/update.php" method="post">
         <div class="row row_color">
             <div class="col-md-12 query_box">
                 <div class="titulo_centro">
-                    <h3>Editar</h3>
+                    <h3>EDITAR</h3>
                     <?php
                 if (isset($_GET['msg'])) {
                     if ($_GET['msg'] == 'name') {
@@ -25,7 +25,7 @@
     if (!$id) { ?>
             <div>
                 <p class="text-danger">Produto não encontrado :/</p>
-                <a href="index.php" class="btn btn-success">VOLTAR</a>
+                <a href="index.php" class="btn btn-primary">VOLTAR</a>
             </div>
             <?php } else { ?>
             <?php $sql = "SELECT * FROM `product` WHERE `id` = $id";
@@ -55,4 +55,4 @@
     <?php } ?>
 </div>
 </div>
-<?php include_once("../../includes/footer.php"); ?>
+<?php include_once("../includes/footer.php");?>

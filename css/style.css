@@ -1,207 +1,77 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  background-color: #f5f5f5;
-}
-
-a {
-  text-decoration: none;
-}
-
-nav {
-  border-bottom: 1px #928f8f solid;
-  margin-bottom: 50px;
-}
-
-.ajuste .col-md-12 {
-  padding: 5px;
-  background-color: #5F9EA0;
-}
-
-.btn-primary:hover {
-  background-color: blue;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.btn-danger:hover {
-  background-color: #ec1919;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#inputEmail {
-  border-radius: 5px;
-  border-color: darkgrey;
-  margin: 10px;
-  padding: 5px;
-  width: 85%;
-}
-
-#btnPesquisar {
-  background-color: #f5f5f5;
-  border: 1px  #000000 solid;
-  border-radius: 5px;
-  color: #000000;
-  padding: 9px;
-  margin: 8px;
-}
-
-#btnPesquisar:hover {
-  background-color: #17e980;
-  border: 1px  #17e980 solid;
-  color: white;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#btnCadastrar {
-  border: 1px  #000000 solid;
-  border-radius: 5px;
-  color: #000000;
-  padding: 9px;
-  margin: 10px 0px 10px 81%;
-}
-
-#btnCadastrar:hover {
-  background-color: #17e980;
-  border: 1px  #17e980 solid;
-  color: white;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#btnSalvar {
-  border: 1px  #000000 solid;
-  border-radius: 5px;
-  color: #000000;
-  padding: 9px;
-  margin: 10px 0px 10px 86.5%;
-}
-
-#btnSalvar:hover {
-  background-color: #17e980;
-  border: 1px  #17e980 solid;
-  color: white;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#btnVoltar {
-  border: 1px  #000000 solid;
-  border-radius: 5px;
-  color: #000000;
-  padding: 9px;
-  margin: 10px 0px 10px 0%;
-}
-
-#btnVoltar:hover {
-  background-color: #17aee9;
-  border: 1px  #17aee9 solid;
-  color: white;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.pesquisa {
-  padding-bottom: 15px;
-  margin-bottom: 5px;
-}
-
-.caixaConsulta {
-  background-color: #5F9EA0;
-}
-
-#tituloConsultaCadastrar {
-  background-color: #5F9EA0;
-  color: white;
-  font-weight: bolder;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-#logo {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-#botaoNavBar {
-  margin-top: 20px;
-  margin-left: 710px;
-}
-
-#titulo {
-  color: black;
-  font-weight: bolder;
-  margin-top: 10px;
-  text-align: center;
-  border-bottom: 1px gray solid;
-}
-
-#ConsultarCliente {
-  margin-top: 15px;
-  padding: 6px;
-}
-
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-#buttonBuscar {
-  text-align: center;
-  padding: 10px;
-  font-size: 20px;
-}
-
-#buttonBuscar .btn {
-  padding: 5px 100px;
-}
-
-.marign10 {
-  font-size: 20px;
-  margin-top: 11px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#resultadoConsulta {
-  margin-top: 10px;
-  margin-bottom: 1050px;
-  padding: 5px;
-}
-
-#resultadoConsulta ul {
-  list-style: none;
-  margin: 0;
-}
-
-.container .row {
-  background-color: #f1f1f1;
-}
-
-#scronllVertical {
-  background-color: aliceblue;
-  margin-bottom: 1050px;
-}
-/*# sourceMappingURL=style.css.map */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  body {
+    background-color: #F8F8FF;
+  }
+  
+  .titulo_centro {
+    color: #1c7b90;
+    text-align: center;
+    margin: 12px;
+  }
+  
+  .titulo_centro h3 {
+    font-weight: bold;
+  }
+  
+  .titulo_centro h4 {
+    color: #000000;
+  }
+  
+  nav {
+    margin-bottom: 0px;
+  }
+  
+  #margin_cadastro {
+    margin-top: 1%;
+    margin-left: 88.5%;
+  }
+  
+  #margin_salvar {
+    margin-right: 801%;
+  }
+  
+  .query_box {
+    background-color: #B0E0E6;
+    border-radius: 8px;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    padding-right: 15px;
+  }
+  
+  .query_box h3 {
+    padding-left: 15px !important;
+  }
+  
+  .create_box {
+    background-color: #B0E0E6;
+    border-radius: 8px;
+    font-weight: bolder;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    margin-bottom: 8px;
+  }
+  
+  #margin_pesquisar {
+    margin-left: 7%;
+  }
+  
+  .row_color {
+    background-color: #edebeb;
+    border-radius: 8px;
+    padding-bottom: 10px;
+  }
+  
+  .button_margin_top {
+    margin-top: 10px;
+  }
+  
+  .button_margin_top button {
+    margin-left: 86%;
+  }

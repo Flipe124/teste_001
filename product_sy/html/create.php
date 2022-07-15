@@ -4,7 +4,7 @@
         <div class="row row_color">
             <div class="col-md-12 create_box">
                 <div class="titulo_centro">
-                    <h3>Cadastrar</h3>
+                    <h3>CADASTRAR</h3>
                     <?php
                     if (isset($_GET['msg'])) {
                         if ($_GET['msg'] == 'name') {
@@ -25,7 +25,6 @@
             <div class="col-md-6">
                 <label for="description">Descrição</label>              
                 <textarea class="form-control" name="description" rows="3" placeholder="Descreva o produto aqui..."></textarea>               
-                <!--<input type="text" name="description" class="form-control" placeholder="Descreve o produto aqui...">-->
             </div>
             <div class="col-md-6" id="margin_cadastro">
                 <button type="submit" class="btn btn-success">CADASTRAR</button>

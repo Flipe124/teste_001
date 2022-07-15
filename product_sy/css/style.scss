@@ -4,26 +4,24 @@
     margin: 0px;
     padding: 0px;    
 }
-body{
-    background-color: #F8F8FF;
-}
+body{background-color: #F8F8FF;}
 
 .titulo_centro{
     color: #1c7b90;
     text-align: center;
     margin: 12px;
-    h3{
-        font-weight: bold;
-    }
+    h3{font-weight: bold;}
+    h4{color: #000000;}
 }
 
-nav{
-    margin-bottom: 0px;
-}
+nav{margin-bottom: 0px;}
 
 #margin_cadastro{
     margin-top: 1%;
     margin-left: 88.5%;
+}
+#margin_salvar{
+    margin-right:801%;
 }
 
 .query_box{
@@ -32,9 +30,7 @@ nav{
     font-weight: bolder;
     padding-bottom: 15px;
     padding-right: 15px;
-    h3{
-        padding-left: 15px !important;  
-    }
+    h3{padding-left: 15px !important;}
 }
 .create_box{
     background-color: #B0E0E6;
@@ -45,12 +41,14 @@ nav{
     margin-bottom: 8px; 
 }
 
-#margin_pesquisar{
-    margin-left: 7%;
-}
+#margin_pesquisar{margin-left: 7%;}
 
 .row_color{
     background-color: #edebeb;
     border-radius: 8px;
     padding-bottom: 10px;
+}
+.button_margin_top{
+    margin-top: 10px;
+    button{margin-left: 86%;}
 }

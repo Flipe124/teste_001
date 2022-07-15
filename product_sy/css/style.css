@@ -20,6 +20,10 @@ body {
   font-weight: bold;
 }
 
+.titulo_centro h4 {
+  color: #000000;
+}
+
 nav {
   margin-bottom: 0px;
 }
@@ -27,6 +31,10 @@ nav {
 #margin_cadastro {
   margin-top: 1%;
   margin-left: 88.5%;
+}
+
+#margin_salvar {
+  margin-right: 801%;
 }
 
 .query_box {
@@ -58,5 +66,13 @@ nav {
   background-color: #edebeb;
   border-radius: 8px;
   padding-bottom: 10px;
+}
+
+.button_margin_top {
+  margin-top: 10px;
+}
+
+.button_margin_top button {
+  margin-left: 86%;
 }
 /*# sourceMappingURL=style.css.map */

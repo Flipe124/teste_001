@@ -17,7 +17,7 @@
                 ?>
             </div>
             <form method="get">
-                <div class="row ajuste">
+                <div class="row">
                     <div class="col-md-12 ">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
@@ -27,9 +27,7 @@
                 </div>
             </form>
         </div>
-        <div  class="col-md-12 titulo_centro">
-            <h4>RESULTADO</h4>
-        </div>
+        <div class="col-md-12 titulo_centro"><h4>RESULTADO</h4></div>
         <hr>
         <table class="table table-striped ">
             <thead>

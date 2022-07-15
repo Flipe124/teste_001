@@ -6,12 +6,13 @@
         <div class="col-md-12 query_box">
             <div class="titulo_centro">
                 <h3>CONSULTAR</h3>
+                <p class="opacity-50 align-middle">PRODUTO</p>
                 <?php
                 if (isset($_GET['msg'])) {
                     if ($_GET['msg'] == 'success') {
-                        echo "Deletado com sucesso";
+                        echo "<p class=text-success>Produto deletado com sucesso</p>";
                     } else if (($_GET['msg'] == 'error')) {
-                        echo "Erro ao deletar";
+                        echo "<p class=text-danger>Produto não deletado</p>";
                     }
                 }
                 ?>
@@ -21,7 +22,7 @@
                     <div class="col-md-12 ">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
-                            <div class="input-group-pprend"><button type="submit" class="btn btn-outline-success" id="margin_pesquisar">PESQUISAR</button></div>
+                            <div class="input-group-pprend"><button type="submit" class="btn btn-ligh" id="margin_pesquisar">PESQUISAR</button></div>
                         </div>
                     </div>
                 </div>

@@ -7,16 +7,17 @@
             <div class="col-md-12 query_box">
                 <div class="titulo_centro">
                     <h3>Editar</h3>
+                    <p class="opacity-50">USUÁRIO</p>
                     <?php
             if (isset($_GET['msg'])) {
                 if ($_GET['msg'] == 'name') {
-                    echo "Informe o nome";
+                    echo "<p class=text-warning>Informe o nome</p>";
                 } else if ($_GET['msg'] == 'date_of_birth') {
-                    echo "Informe a data de nascimento";
+                    echo "<p class=text-warning>Informe a data de nascimento</p>";
                 } else if ($_GET['msg'] == 'error') {
-                    echo "Usuário não alterado";
+                    echo "<p class=text-danger>Usuário não alterado com sucesso</p>";
                 } else if ($_GET['msg'] == 'success') {
-                    echo "Usuário alterado com sucesso";
+                    echo "<p class=text-success>Usuário alterado com sucesso</p>";
                 } 
             }
             ?>

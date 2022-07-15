@@ -11,7 +11,7 @@ if (!$name) {
 }
 
 if (!$date_of_birth) {
-    header("Location: ../../user/create.phpmsg=date_of_birth");
+    header("Location: ../../user/create.php?msg=date_of_birth");
     return;
 }
 

@@ -7,12 +7,12 @@ $date_of_birth = isset($_POST["date_of_birth"]) && $_POST["date_of_birth"] != ""
 $email  = isset($_POST["email"]) && $_POST["email"] != ""  ? $_POST["email"] : NULL;
 
 if (!$name) {
-    header("Location: ../../user/edit.php?msg=name");
+    header("Location: ../../user/edit.php?id=$id&msg=name");
     return;
 }
 
 if (!$date_of_birth) {
-    header("Location: ../../user/edit.php?msg=date_of_birth");
+    header("Location: ../../user/edit.php?id=$id&msg=date_of_birth");
     return;
 }
 $sql = ('UPDATE user SET name= :name, date_of_birth= :date_of_birth, email= :email WHERE id= :id');
@@ -27,7 +27,7 @@ if ($update->execute()) {
     header("Location: ../../user/edit.php?id=$id&msg=success");// Estou testando
     return;
 } else {
-    header("Location: ../../user/edit.php?msg=error");
+    header("Location: ../../user/edit.php?id=$id&msg=error");
     return;
 }
 ?>

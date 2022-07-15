@@ -1,13 +1,16 @@
-* {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+* {      
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
   }
   
   body {
     background-color: #F8F8FF;
+  }
+
+  .btn-ligh{
+    background-color: #edebeb;
+  }
+  .btn-ligh:hover{
+    background-color: #edebeb;
   }
   
   .titulo_centro {
@@ -18,14 +21,11 @@
   
   .titulo_centro h3 {
     font-weight: bold;
+    padding-left: 0;
   }
   
   .titulo_centro h4 {
     color: #000000;
-  }
-  
-  nav {
-    margin-bottom: 0px;
   }
   
   #margin_cadastro {
@@ -41,13 +41,9 @@
     background-color: #B0E0E6;
     border-radius: 8px;
     font-weight: bolder;
-    padding-bottom: 15px;
-    padding-right: 15px;
+    padding-bottom: 15px;  
   }
   
-  .query_box h3 {
-    padding-left: 15px !important;
-  }
   
   .create_box {
     background-color: #B0E0E6;
@@ -59,7 +55,8 @@
   }
   
   #margin_pesquisar {
-    margin-left: 7%;
+    margin-right: 15px;
+    margin-left: 10%;
   }
   
   .row_color {

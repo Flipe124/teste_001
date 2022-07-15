@@ -6,7 +6,7 @@ $name = isset($_POST["name"]) && $_POST["name"] != "" ? $_POST["name"] : NULL;
 $description  = isset($_POST["description"]) && $_POST["description"] != ""  ? $_POST["description"] : NULL;
 
 if (!$name) {
-    header("Location: ../../product/edit.php?msg=name");
+    header("Location: ../../product/edit.php?id=$id&msg=name");
     return;
 }
 
@@ -21,7 +21,7 @@ if ($update->execute()) {
     header("Location:  ../../product/edit.php?id=$id&msg=success");
     return;
 } else {
-    header("Location: ../../product/edit.php?msg=error");
+    header("Location: ../../product/edit.php?id=$id&msg=error");
     return;
 }
 ?>

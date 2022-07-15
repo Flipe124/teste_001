@@ -6,14 +6,15 @@
             <div class="col-md-12 query_box">
                 <div class="titulo_centro">
                     <h3>EDITAR</h3>
+                    <p class="opacity-50">PRODUTO</p>
                     <?php
                 if (isset($_GET['msg'])) {
                     if ($_GET['msg'] == 'name') {
-                        echo "Informe o nome";
+                        echo "<p class=text-warning>Informe o nome</p>";
                     } else if ($_GET['msg'] == 'error') {
-                        echo "Produto não alterado com sucesso";
+                        echo "<p class=text-danger>Produto não alterado com sucesso</p>";
                     } else if ($_GET['msg'] == 'success') {
-                        echo "Produto alterado com sucesso";
+                        echo "<p class=text-success>Produto alterado com sucesso</p>";
                     } 
                 }
                 ?>

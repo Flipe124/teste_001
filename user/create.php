@@ -1,20 +1,21 @@
 <?php include_once("../includes/header.php"); ?>
 <div class="container">
     <form method="POST" action="../process/user/create.php" class="form">
-        <div class="row">
-            <div class="col-md-12 caixaConsulta">
-                <div id="tituloConsultaCadastrar">
-                    <h3>Cadastrar</h3>
+        <div class="row row_color">
+            <div class="col-md-12 create_box">
+                <div class="titulo_centro">
+                    <h3>CADASTRAR</h3>
+                    <p class="opacity-50">USUÁRIO</p>
                     <?php
                     if (isset($_GET['msg'])) {
                         if ($_GET['msg'] == 'name') {
-                            echo "Informe o nome";
+                            echo "<p class=text-warning>Informe o nome</p>";
                         } else if ($_GET['msg'] == 'date_of_birth') {
-                            echo "Informe a data de nascimento";
+                            echo "<p class=text-warning>Informe a data de nascimento</p>";
                         } else if ($_GET['msg'] == 'error') {
-                            echo "Usuário não cadastrado";
+                            echo "<p class=text-danger>Usuário não encontrado</p>";
                         } else if ($_GET['msg'] == 'success') {
-                            echo "Usuário cadastrado com sucesso";
+                            echo "<p class=text-success>Usuário cadastrado com sucesso</p>";
                         }
                     }
                     ?>
@@ -22,7 +23,7 @@
             </div>
             <div class="col-md-5">
                 <label for="nome">Nome</label>
-                <input type="text" name="name" class="form-control" placeholder="Nome" id="nome">
+                <input type="text" name="name" class="form-control" placeholder="Nome">
             </div>
             <div class="col-md-2">
                 <label for="data_de_nascimento">Data de nascimento</label>
@@ -32,9 +33,7 @@
                 <label for="email">E-mail</label>
                 <input type="email" name="email" class="form-control" placeholder="E-mail">
             </div>
-            <div class="col-md-6">
-                <button type="submit" id="btnCadastrar">CADASTRAR</button>
-            </div>
+            <div class="col-md-6" id="margin_cadastro"><button type="submit" class="btn btn-success">CADASTRAR</button></div>
         </div>
     </form>
 </div>

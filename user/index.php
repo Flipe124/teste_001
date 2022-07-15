@@ -5,7 +5,7 @@
         <div class="col-md-12 query_box">
             <div class="titulo_centro">
                 <h3>CONSULTAR</h3>
-                <p class="opacity-50">USUÁRIO</p>
+                <p class="fs-5">USUÁRIO</p>
                 <?php
                 if (isset($_GET['msg'])) {
                     if ($_GET['msg'] == 'success') {
@@ -21,7 +21,7 @@
                     <div class="col-md-12 ">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
-                            <div class="input-group-pprend"><button class="btn btn-ligh" id="margin_pesquisar" type="submit">PESQUISAR</button></div>
+                            <div class="input-group-pprend"><button class="btn btn-primary" id="margin_pesquisar" type="submit">PESQUISAR</button></div>
                         </div>
                     </div>
                 </div>
@@ -32,24 +32,24 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th class="w-10 p-3" scope="col">#ID</th>
-                    <th class="w-10 p-3" scope="col">Nome</th>
-                    <th class="w-10 p-3" scope="col">Data Nasc</th>
-                    <th class="w-20 p-3" scope="col">E-mail</th>
-                    <th class="w- p-3" scope="col">Ação</th>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data Nasc</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Ação</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-
+                // NAME
                 $search = isset($_GET["search"]) ? $_GET["search"] : "";
 
-                $sql = "SELECT * FROM `user` WHERE  1 = 1";
+                $sql = "SELECT * FROM `user` WHERE 1 = 1";
 
                 if ($search) {
-                    $sql .= " AND `name` LIKE " . "'%" . $search . "%'";
+                    $sql .= " name LIKE " . "'%" . $search . "%'" . "AND email LIKE ". "'%" . $search . "%'";
                 }
-
+             
                 $users = Database::connection()->query($sql)->fetchAll(PDO::FETCH_ASSOC);;
                 ?>
                 <?php foreach ($users as $user) { ?>

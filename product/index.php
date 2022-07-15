@@ -6,7 +6,7 @@
         <div class="col-md-12 query_box">
             <div class="titulo_centro">
                 <h3>CONSULTAR</h3>
-                <p class="opacity-50 align-middle">PRODUTO</p>
+                <p class="fs-5">PRODUTO</p>
                 <?php
                 if (isset($_GET['msg'])) {
                     if ($_GET['msg'] == 'success') {
@@ -22,21 +22,21 @@
                     <div class="col-md-12 ">
                         <div class="input-group">
                             <input type="text" name="search" class="form-control" placeholder="Digite aqui para pesquisar...">
-                            <div class="input-group-pprend"><button type="submit" class="btn btn-ligh" id="margin_pesquisar">PESQUISAR</button></div>
+                            <div class="input-group-pprend"><button type="submit" class="btn btn-primary" id="margin_pesquisar">PESQUISAR</button></div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="col-md-12 titulo_centro"><h4>RESULTADO</h4></div>
+        <div class="col-md-12 titulo_centro"><h4>Resultado</h4></div>
         <hr>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th class="w-5 p-3" scope="col">#ID</th>
-                    <th class="w-25 p-3" scope="col">Nome</th>
-                    <th class="w-70 p-3" scope="col">Descrição</th>
-                    <th class="w-5 p-3" scope="col">Ação</th>
+                    <th scope="col">#ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Ação</th>
                 </tr>
             </thead>
             <tbody>
